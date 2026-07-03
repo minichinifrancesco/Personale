@@ -2,7 +2,6 @@ import React, { useState, useCallback, useMemo } from 'react';
 import {
   SafeAreaView,
   View,
-  Image,
   Text,
   TouchableOpacity,
   TextInput,
@@ -11,7 +10,7 @@ import {
 } from 'react-native';
 import { useEffectiveDark, useSettings } from '../context/SettingsContext';
 import { Swipeable } from 'react-native-gesture-handler';
-import { logoCompact, COLORS } from '../constants';
+import { COLORS } from '../constants';
 import { Ionicons } from '@expo/vector-icons';
 import { getStyles } from '../styles/styles';
 import DraggableExerciseList from '../components/DraggableExerciseList';
@@ -212,7 +211,6 @@ export default function ActiveWorkoutScreen({
           >
             <Ionicons name="arrow-back" size={24} color={isDarkMode ? '#ffffff' : '#1e293b'} />
           </TouchableOpacity>
-          <Image source={logoCompact} style={styles.logoSmall} />
           <View>
             <Text style={styles.headerTitle}>Sessione attiva</Text>
             <Text style={styles.headerSubtitle}>{activeWorkout.name}</Text>

@@ -1,6 +1,3 @@
-export const logoFull = require('../assets/logo.png');
-export const logoCompact = require('../assets/logo.png');
-
 export const COLORS = {
   primary: '#16a34a',
   primaryDark: '#15803d',

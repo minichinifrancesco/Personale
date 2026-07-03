@@ -1,7 +1,6 @@
 import React from 'react';
-import { SafeAreaView, View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useEffectiveDark } from '../context/SettingsContext';
-import { logoFull } from '../constants';
 import { getStyles, getThemeColors } from '../styles/styles';
 
 export default function LoginScreen({
@@ -19,7 +18,7 @@ export default function LoginScreen({
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.authContainer}>
-        <Image source={logoFull} style={styles.logoFull} />
+        <Text style={styles.authLogoText}>W-Note</Text>
         <Text style={styles.tagline}>TRACK. PROGRESS. REPEAT.</Text>
 
         <View style={styles.authCard}>

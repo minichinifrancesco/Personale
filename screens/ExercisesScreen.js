@@ -2,7 +2,6 @@ import React, { useState, useRef, useMemo, useCallback } from 'react';
 import {
   SafeAreaView,
   View,
-  Image,
   Text,
   TouchableOpacity,
   TextInput,
@@ -10,7 +9,6 @@ import {
 } from 'react-native';
 import { useEffectiveDark } from '../context/SettingsContext';
 import { Swipeable } from 'react-native-gesture-handler';
-import { logoCompact } from '../constants';
 import { getStyles, getThemeColors } from '../styles/styles';
 import BottomNav from '../components/BottomNav';
 import HelpButton from '../components/HelpModal';
@@ -208,7 +206,6 @@ export default function ExercisesScreen({
       {/* ── Header ── */}
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Image source={logoCompact} style={styles.logoSmall} />
           <View>
             <Text style={styles.headerTitle}>Esercizi</Text>
             <Text style={styles.headerSubtitle}>{formatDate()}</Text>

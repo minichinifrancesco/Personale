@@ -1,7 +1,6 @@
 import React from 'react';
-import { SafeAreaView, View, Image, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { useEffectiveDark } from '../context/SettingsContext';
-import { logoCompact } from '../constants';
 import { getStyles } from '../styles/styles';
 import BottomNav from '../components/BottomNav';
 import HelpButton from '../components/HelpModal';
@@ -27,7 +26,6 @@ export default function HomeScreen({
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Image source={logoCompact} style={styles.logoSmall} />
           <View>
             <Text style={styles.headerTitle}>W-Note</Text>
             <Text style={styles.headerSubtitle}>{formatDate()}</Text>

@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
-import { SafeAreaView, View, Image, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { useEffectiveDark } from '../context/SettingsContext';
-import { logoCompact } from '../constants';
 import { getStyles } from '../styles/styles';
 import BottomNav from '../components/BottomNav';
 import HelpButton from '../components/HelpModal';
@@ -42,7 +41,6 @@ export default function ProfileScreen({
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Image source={logoCompact} style={styles.logoSmall} />
           <View>
             <Text style={styles.headerTitle}>Profilo</Text>
             <Text style={styles.headerSubtitle}>{user?.email || 'Utente'}</Text>

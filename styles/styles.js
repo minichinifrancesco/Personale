@@ -79,6 +79,12 @@ export const getStyles = (isDark) => {
       marginBottom: 8,
       resizeMode: 'contain',
     },
+    authLogoText: {
+      fontSize: 42,
+      fontWeight: '900',
+      color: C.textDark,
+      marginBottom: 8,
+    },
     tagline: {
       fontSize: 18,
       color: '#86B749',

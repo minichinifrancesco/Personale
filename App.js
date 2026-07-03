@@ -206,30 +206,8 @@ function MainApp() {
           console.log('Haptics feedback error:', err);
         }
 
-        try {
-          if (settings.restTimerSound) {
-            const { Audio } = require('expo-av');
-            // Configure Audio to play through the ringtone/speaker channel at maximum system output
-            await Audio.setAudioModeAsync({
-              playsInSilentModeIOS: true,
-              staysActiveInBackground: true,
-              shouldRouteThroughEarpieceAndroid: false,
-            });
-            const { sound } = await Audio.Sound.createAsync(
-              require('./assets/ping.mp3'),
-              { volume: 1.0 } // Set volume level to 1.0 (maximum output)
-            );
-            await sound.playAsync();
-            // Automatically stop the sound after 3 seconds
-            setTimeout(async () => {
-              try {
-                await sound.stopAsync();
-                await sound.unloadAsync();
-              } catch (e) {}
-            }, 3000);
-          }
-        } catch (err) {
-          console.log('Audio feedback error:', err);
+        if (settings.restTimerSound) {
+          console.log('Rest timer sound disabled in Snack build.');
         }
       };
 
